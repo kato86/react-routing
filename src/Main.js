@@ -1,29 +1,19 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import Roster from './Roster';
+import Schedule from './Schedule';
 
-class Main extends Component {
-    render() {
-        return (
-            <div>
-                <nav className="navbar navbar-default">
-                    <div className="container-fluid">
-                        <div className="navbar-header">
-                            <a className="navbar-brand" href="#">Routing</a>
-                        </div>
-                        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul className="nav navbar-nav">
-                                <li><Link to="/">Home</Link></li>
-                                <li><Link to="/about">About</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                <div className="container">
-                    {this.props.children}
-                </div>
-            </div>
-        );
-    }
+function Main() {
+    return (
+        <main>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/roster" component={Roster} />
+                <Route path="/schedule" component={Schedule} />
+            </Switch>
+        </main>
+    )
 }
 
 export default Main;
