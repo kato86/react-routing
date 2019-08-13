@@ -7,15 +7,16 @@ import {
 
 import Home from './Home';
 import About from './About';
+import Main from './Main';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="container">
+        <Route component={Main} path="app">
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-        </div>
+        </Route>
       </Router>
     );    
   }
