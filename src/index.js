@@ -1,6 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Componet } from 'react';
+import { render } from 'react-dom';
 import './index.css';
-import App from './App';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import About from './About';
+import Home from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(
+    <Router>
+        <Route path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+    </Router>,
+    document.getElementById('root')
+);
