@@ -1,9 +1,9 @@
 import React from 'react';
 
-const About = () => {
+const About = (props) => {
     return (
         <div className="container">
-            <h1>About !!!</h1>
+            <h1>About !!! {props.match.params.id}</h1>
         </div>
     )
 }
