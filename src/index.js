@@ -1,10 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './index.css';
+import App from './components/App';
 
 render(
-    <div>
-        <h1>Test</h1>
-    </div>,
+    <App />,
     document.getElementById('root')
 );
